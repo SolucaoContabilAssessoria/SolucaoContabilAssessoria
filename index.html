@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solução Contábil e Assessoria | Espigão d'Oeste - RO</title>
+
+    <meta name="description"
+          content="Solução Contábil e Assessoria - Serviços de contabilidade, consultoria e assessoria tributária em Espigão d'Oeste - RO.">
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --verde: #0b3b2e;
+            --verde-claro: #145b45;
+            --dourado: #c9a227;
+            --dourado-claro: #f5edcf;
+            --fundo: #f7f9f7;
+            --texto: #15221e;
+            --cinza: #68756f;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+            color: var(--texto);
+            background: var(--fundo);
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(11, 59, 46, .97);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dourado);
+            color: var(--verde);
+            font-size: 1.3rem;
+        }
+
+        .navbar .nav-link {
+            color: rgba(255,255,255,.85);
+            font-weight: 600;
+        }
+
+        .navbar .nav-link:hover {
+            color: #fff;
+        }
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .btn-dourado {
+            background: var(--dourado);
+            border: none;
+            color: #172018;
+            font-weight: 800;
+        }
+
+        .btn-dourado:hover {
+            background: #e0bc3c;
+            color: #172018;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 30, 23, .96) 0%,
+                    rgba(8, 53, 40, .85) 48%,
+                    rgba(8, 53, 40, .35) 100%
+                ),
+                url("https://digitalasset.intuit.com/render/content/dam/intuit/sbseg/en_gb/marketing/accountants/mtd/mtd-accountants-hero.jpg")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.02;
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.82);
+            font-size: 1.15rem;
+            max-width: 720px;
+        }
+
+        .etiqueta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 17px;
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.08);
+            border-radius: 50px;
+            color: white;
+            font-size: .8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-cinza {
+            background: #eef4f0;
+        }
+
+        .titulo-pequeno {
+            color: var(--verde-claro);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .78rem;
+            font-weight: 800;
+        }
+
+        .titulo {
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
+
+        /* =========================
+           SERVIÇOS
+        ========================= */
+
+        .servico {
+            background: #fff;
+            border: 1px solid rgba(16,45,36,.08);
+            border-radius: 22px;
+            padding: 30px;
+            height: 100%;
+            transition: .3s;
+            box-shadow: 0 15px 45px rgba(19,51,42,.07);
+        }
+
+        .servico:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 25px 60px rgba(19,51,42,.13);
+        }
+
+        .icone-servico {
+            width: 60px;
+            height: 60px;
+            border-radius: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dourado-claro);
+            color: var(--verde);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .servico h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .servico p {
+            color: var(--cinza);
+            margin: 0;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .imagem-sobre {
+            min-height: 520px;
+            border-radius: 30px;
+
+            background:
+                url("https://assets.taxassist.co.uk/file-uploads/gcs/1732642081_adobestock-1001134763-accountant-and-client.jpg")
+                center/cover no-repeat;
+
+            box-shadow: 0 25px 60px rgba(19,51,42,.15);
+        }
+
+        .lista-check {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lista-check li {
+            display: flex;
+            gap: 10px;
+            margin: 16px 0;
+            color: #42514b;
+        }
+
+        .lista-check i {
+            color: #b08b19;
+            font-size: 1.1rem;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .card-info {
+            background: white;
+            border: 1px solid rgba(16,45,36,.08);
+            border-radius: 22px;
+            box-shadow: 0 15px 45px rgba(19,51,42,.07);
+        }
+
+        .tabela th {
+            color: #718078;
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 35%;
+        }
+
+        .tabela td,
+        .tabela th {
+            padding: 18px 12px;
+            border-bottom-color: #e7ece9;
+        }
+
+        /* =========================
+           MAPA
+        ========================= */
+
+        .mapa {
+            overflow: hidden;
+            border-radius: 25px;
+            min-height: 430px;
+            box-shadow: 0 18px 50px rgba(19,51,42,.12);
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 430px;
+            border: 0;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contato {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--verde),
+                    #0e6249
+                );
+
+            color: white;
+            border-radius: 30px;
+            padding: 50px;
+        }
+
+        .item-contato {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .icone-contato {
+            width: 45px;
+            height: 45px;
+            border-radius: 13px;
+            background: rgba(255,255,255,.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .item-contato a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .item-contato a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #06271f;
+            color: #b9c8c2;
+        }
+
+        /* =========================
+           WHATSAPP FLUTUANTE
+        ========================= */
+
+        .whatsapp-flutuante {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            text-decoration: none;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+            transition: .2s;
+        }
+
+        .whatsapp-flutuante:hover {
+            color: white;
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media(max-width: 991px) {
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .imagem-sobre {
+                min-height: 380px;
+            }
+
+            .contato {
+                padding: 35px 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container py-2">
+
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+
+            <span class="brand-icon">
+                <i class="bi bi-calculator"></i>
+            </span>
+
+            <span>
+                Solução Contábil
+                <small class="d-block fw-normal opacity-75"
+                       style="font-size:.65rem; letter-spacing:1px;">
+                    E ASSESSORIA
+                </small>
+            </span>
+
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">
+                        Serviços
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">
+                        Sobre
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">
+                        Empresa
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#localizacao">
+                        Localização
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2">
+
+                    <a
+                        class="btn btn-dourado rounded-pill px-4"
+                        href="https://wa.me/5569984876991?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20contábeis."
+                        target="_blank"
+                    >
+                        WhatsApp
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header id="inicio" class="hero">
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-lg-9">
+
+                <span class="etiqueta mb-4">
+
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    Contabilidade & Assessoria
+
+                </span>
+
+                <h1 class="mb-4">
+
+                    Contabilidade que organiza hoje e prepara seu negócio para amanhã.
+
+                </h1>
+
+                <p class="mb-4">
+
+                    Soluções contábeis e tributárias para empresas e empreendedores
+                    que buscam organização, segurança e informações para tomar
+                    decisões melhores.
+
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a
+                        href="#servicos"
+                        class="btn btn-dourado btn-lg rounded-pill px-4"
+                    >
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+
+                    <a
+                        href="tel:+5569984876991"
+                        class="btn btn-outline-light btn-lg rounded-pill px-4"
+                    >
+                        <i class="bi bi-telephone me-2"></i>
+                        (69) 98487-6991
+                    </a>
+
+                </div>
+
+                <div class="row g-4 mt-5">
+
+                    <div class="col-6 col-md-4">
+
+                        <strong class="text-white fs-4 d-block">
+                            Ativa
+                        </strong>
+
+                        <span class="text-white-50">
+                            Situação cadastral
+                        </span>
+
+                    </div>
+
+                    <div class="col-6 col-md-4">
+
+                        <strong class="text-white fs-4 d-block">
+                            Simples
+                        </strong>
+
+                        <span class="text-white-50">
+                            Regime tributário
+                        </span>
+
+                    </div>
+
+                    <div class="col-6 col-md-4">
+
+                        <strong class="text-white fs-4 d-block">
+                            CRC RO
+                        </strong>
+
+                        <span class="text-white-50">
+                            RO000892O
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     SERVIÇOS
+===================================================== -->
+
+<section id="servicos" class="section">
+
+    <div class="container">
+
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="titulo-pequeno mb-2">
+                    Nossos serviços
+                </div>
+
+                <h2 class="titulo display-6 mb-3">
+                    Atividades de contabilidade para deixar sua empresa em ordem.
+                </h2>
+
+                <p class="text-secondary">
+                    Atendimento próximo e soluções práticas para a rotina
+                    contábil, fiscal e tributária da sua empresa.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Serviço 1 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="servico">
+
+                    <div class="icone-servico">
+                        <i class="bi bi-journal-check"></i>
+                    </div>
+
+                    <h3>
+                        Escrituração Contábil
+                    </h3>
+
+                    <p>
+                        Organização e acompanhamento dos registros contábeis,
+                        mantendo as informações da empresa estruturadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 2 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="servico">
+
+                    <div class="icone-servico">
+                        <i class="bi bi-receipt-cutoff"></i>
+                    </div>
+
+                    <h3>
+                        Obrigações Fiscais
+                    </h3>
+
+                    <p>
+                        Acompanhamento das rotinas fiscais e das obrigações
+                        relacionadas à atividade empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 3 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="servico">
+
+                    <div class="icone-servico">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <h3>
+                        Relatórios e Análises
+                    </h3>
+
+                    <p>
+                        Informações contábeis apresentadas de maneira clara
+                        para auxiliar no acompanhamento da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 4 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="servico">
+
+                    <div class="icone-servico">
+                        <i class="bi bi-bank"></i>
+                    </div>
+
+                    <h3>
+                        Assessoria Tributária
+                    </h3>
+
+                    <p>
+                        Orientação sobre questões tributárias e apoio na
+                        organização das rotinas fiscais.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 5 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="servico">
+
+                    <div class="icone-servico">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h3>
+                        Consultoria Contábil
+                    </h3>
+
+                    <p>
+                        Análise de situações contábeis e tributárias para
+                        auxiliar empresários.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Serviço 6 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="servico">
+
+                    <div class="icone-servico">
+                        <i class="bi bi-building-check"></i>
+                    </div>
+
+                    <h3>
+                        Suporte ao Empresário
+                    </h3>
+
+                    <p>
+                        Atendimento para dúvidas e necessidades do dia a dia,
+                        aproximando a contabilidade das decisões do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE
+===================================================== -->
+
+<section id="sobre" class="section section-cinza">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6">
+
+                <div
+                    class="imagem-sobre"
+                    aria-label="Atendimento contábil"
+                ></div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="titulo-pequeno mb-2">
+                    Sobre a empresa
+                </div>
+
+                <h2 class="titulo display-6 mb-4">
+                    Solução Contábil e Assessoria
+                </h2>
+
+                <p class="lead text-secondary">
+
+                    Uma empresa de contabilidade localizada em
+                    Espigão d'Oeste, Rondônia, oferecendo serviços
+                    contábeis, consultoria e assessoria tributária.
+
+                </p>
+
+
+                <ul class="lista-check my-4">
+
+                    <li>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Atividade principal:
+                            <strong>
+                                69.20-6-01 — Atividades de contabilidade
+                            </strong>
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Atividade secundária:
+                            <strong>
+                                69.20-6-02 — Consultoria e auditoria contábil e tributária
+                            </strong>
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Microempresa optante pelo
+                            <strong>
+                                Simples Nacional
+                            </strong>
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Responsável:
+                            <strong>
+                                Daiane da Penha Lopes Braun
+                            </strong>
+                        </span>
+
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="#contato"
+                    class="btn btn-dark rounded-pill px-4"
+                >
+                    Entrar em contato
+                    <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DADOS DA EMPRESA
+===================================================== -->
+
+<section id="empresa" class="section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="titulo-pequeno mb-2">
+                Informações cadastrais
+            </div>
+
+            <h2 class="titulo display-6">
+                Dados da empresa
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-8">
+
+                <div class="card-info p-4 p-lg-5">
+
+                    <div class="table-responsive">
+
+                        <table class="table tabela align-middle mb-0">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th>CNPJ</th>
+
+                                    <td>
+                                        <strong>
+                                            45.510.049/0001-22
+                                        </strong>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Razão Social</th>
+
+                                    <td>
+                                        Daiane da P L Braun Escritorio Contabil
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Nome Fantasia</th>
+
+                                    <td>
+                                        Solução Contábil e Assessoria
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>CRC</th>
+
+                                    <td>
+                                        RO000892O
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Data de abertura</th>
+
+                                    <td>
+                                        03/03/2022
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Porte</th>
+
+                                    <td>
+                                        Micro Empresa
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Natureza Jurídica</th>
+
+                                    <td>
+                                        Empresário (Individual)
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Regime</th>
+
+                                    <td>
+                                        Simples Nacional
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Capital Social</th>
+
+                                    <td>
+                                        R$ 10.000,00
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Tipo</th>
+
+                                    <td>
+                                        Matriz
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>Situação</th>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success rounded-pill">
+                                            Ativa
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="card-info p-4 p-lg-5 h-100">
+
+                    <div class="icone-servico">
+
+                        <i class="bi bi-person-badge"></i>
+
+                    </div>
+
+                    <h3 class="h5 fw-bold">
+                        Sócia-Administradora
+                    </h3>
+
+                    <p class="mb-1">
+                        Daiane da Penha Lopes Braun
+                    </p>
+
+                    <p class="text-secondary small">
+                        Qualificação: Empresário
+                    </p>
+
+
+                    <hr>
+
+
+                    <div class="icone-servico mt-4">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                    </div>
+
+                    <h3 class="h5 fw-bold">
+                        Endereço
+                    </h3>
+
+                    <p class="text-secondary">
+
+                        Rua Fernando Luiz Timoteo, 801<br>
+
+                        Bela Vista<br>
+
+                        Espigão d'Oeste — RO<br>
+
+                        CEP 76974-000
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOCALIZAÇÃO
+===================================================== -->
+
+<section id="localizacao" class="section section-cinza">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-stretch">
+
+            <div class="col-lg-5">
+
+                <div class="titulo-pequeno mb-2">
+                    Onde estamos
+                </div>
+
+                <h2 class="titulo display-6 mb-3">
+                    Atendimento em Espigão d'Oeste
+                </h2>
+
+                <p class="text-secondary">
+
+                    Encontre a Solução Contábil e Assessoria no
+                    bairro Bela Vista, em Espigão d'Oeste — Rondônia.
+
+                </p>
+
+
+                <div class="item-contato text-dark">
+
+                    <div
+                        class="icone-contato"
+                        style="background:#e6efe9;color:#0b3b2e"
+                    >
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Endereço
+                        </strong>
+
+                        <br>
+
+                        <span class="text-secondary">
+
+                            Rua Fernando Luiz Timoteo, 801<br>
+
+                            Bela Vista<br>
+
+                            76974-000 — Espigão d'Oeste/RO
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="d-flex flex-wrap gap-2 mt-4">
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Rua%20Fernando%20Luiz%20Timoteo%2C%20801%2C%20Bela%20Vista%2C%20Espig%C3%A3o%20d%27Oeste%20-%20RO%2C%2076974-000"
+                        target="_blank"
+                        class="btn btn-dark rounded-pill px-4"
+                    >
+
+                        <i class="bi bi-map me-2"></i>
+
+                        Abrir no Google Maps
+
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/5569984876991"
+                        target="_blank"
+                        class="btn btn-outline-dark rounded-pill px-4"
+                    >
+
+                        <i class="bi bi-whatsapp me-2"></i>
+
+                        WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="mapa">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Rua%20Fernando%20Luiz%20Timoteo%2C%20801%2C%20Bela%20Vista%2C%20Espig%C3%A3o%20d%27Oeste%20-%20RO%2C%2076974-000&output=embed"
+                        loading="lazy"
+                        title="Mapa da Solução Contábil e Assessoria"
+                    >
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTATO
+===================================================== -->
+
+<section id="contato" class="section">
+
+    <div class="container">
+
+        <div class="contato">
+
+            <div class="row g-5 align-items-center">
+
+                <div class="col-lg-6">
+
+                    <div
+                        class="titulo-pequeno mb-2"
+                        style="color:#e8d68b"
+                    >
+                        Fale conosco
+                    </div>
+
+                    <h2 class="display-6 fw-bold mb-3">
+
+                        Precisa de apoio com a contabilidade da sua empresa?
+
+                    </h2>
+
+                    <p class="text-white-50 mb-0">
+
+                        Entre em contato para tirar dúvidas,
+                        conhecer os serviços e solicitar um atendimento.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <!-- TELEFONE -->
+
+                    <div class="item-contato">
+
+                        <div class="icone-contato">
+
+                            <i class="bi bi-whatsapp"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small class="text-white-50">
+                                WhatsApp / Telefone
+                            </small>
+
+                            <br>
+
+                            <a
+                                href="https://wa.me/5569984876991"
+                                target="_blank"
+                                class="fs-5 fw-bold"
+                            >
+                                (69) 98487-6991
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="item-contato">
+
+                        <div class="icone-contato">
+
+                            <i class="bi bi-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small class="text-white-50">
+                                E-mail
+                            </small>
+
+                            <br>
+
+                            <a
+                                href="mailto:golipasatheik1@gmail.com"
+                                class="fw-bold"
+                            >
+                                golipasatheik1@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+
+                        <a
+                            href="https://wa.me/5569984876991?text=Olá!%20Gostaria%20de%20solicitar%20um%20atendimento%20contábil."
+                            target="_blank"
+                            class="btn btn-dourado btn-lg rounded-pill px-4"
+                        >
+
+                            Solicitar atendimento
+
+                            <i class="bi bi-arrow-up-right ms-1"></i>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:golipasatheik1@gmail.com"
+                            class="btn btn-outline-light btn-lg rounded-pill px-4"
+                        >
+
+                            Enviar e-mail
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4 align-items-center">
+
+            <div class="col-lg-7">
+
+                <div class="d-flex align-items-center gap-2 mb-2">
+
+                    <span class="brand-icon">
+
+                        <i class="bi bi-calculator"></i>
+
+                    </span>
+
+                    <strong class="text-white fs-5">
+
+                        Solução Contábil e Assessoria
+
+                    </strong>
+
+                </div>
+
+                <p class="mb-0 small">
+
+                    Daiane da P L Braun Escritorio Contabil
+
+                    <br>
+
+                    CNPJ 45.510.049/0001-22
+
+                    • CRC RO000892O
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-5 text-lg-end">
+
+                <p class="mb-1 small">
+
+                    Rua Fernando Luiz Timoteo, 801
+
+                    — Bela Vista
+
+                </p>
+
+                <p class="mb-0 small">
+
+                    Espigão d'Oeste — Rondônia
+
+                    • CEP 76974-000
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr class="border-secondary my-4">
+
+
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between gap-2 small"
+        >
+
+            <span>
+
+                © 2026 Solução Contábil e Assessoria.
+
+                Todos os direitos reservados.
+
+            </span>
+
+            <span>
+
+                Contabilidade • Consultoria • Assessoria Tributária
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP FLUTUANTE
+===================================================== -->
+
+<a
+    class="whatsapp-flutuante"
+    href="https://wa.me/5569984876991?text=Olá!%20Vim%20pelo%20site%20da%20Solução%20Contábil%20e%20gostaria%20de%20mais%20informações."
+    target="_blank"
+    aria-label="Falar pelo WhatsApp"
+>
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
